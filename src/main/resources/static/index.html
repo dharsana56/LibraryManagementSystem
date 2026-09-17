@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            📚 Library Management
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="books.html">Books</a>
+            <a href="members.html">Members</a>
+            <a href="transactions.html">Transactions</a>
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main class="container">
+
+        <div class="page-header">
+
+            <div>
+                <h1>Dashboard</h1>
+
+                <p>
+                    Welcome to your Library Management System
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- STAT CARDS -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">📚</div>
+
+                <div>
+                    <p>Total Books</p>
+                    <h2 id="totalBooks">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">📖</div>
+
+                <div>
+                    <p>Available Books</p>
+                    <h2 id="availableBooks">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">👥</div>
+
+                <div>
+                    <p>Total Members</p>
+                    <h2 id="totalMembers">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">📕</div>
+
+                <div>
+                    <p>Issued Books</p>
+                    <h2 id="issuedBooks">0</h2>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">🔄</div>
+
+                <div>
+                    <p>Returned Books</p>
+                    <h2 id="returnedBooks">0</h2>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section class="section">
+
+            <h2>Quick Actions</h2>
+
+            <div class="quick-actions">
+
+                <a href="books.html" class="action-card">
+
+                    <span>📚</span>
+
+                    <div>
+                        <h3>Add Book</h3>
+                        <p>Add a new book to the library</p>
+                    </div>
+
+                </a>
+
+
+                <a href="members.html" class="action-card">
+
+                    <span>👤</span>
+
+                    <div>
+                        <h3>Add Member</h3>
+                        <p>Register a new library member</p>
+                    </div>
+
+                </a>
+
+
+                <a href="transactions.html" class="action-card">
+
+                    <span>📖</span>
+
+                    <div>
+                        <h3>Issue Book</h3>
+                        <p>Issue a book to a member</p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECENT TRANSACTIONS -->
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>Recent Transactions</h2>
+
+                <a href="transactions.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Book</th>
+
+                            <th>Member</th>
+
+                            <th>Issue Date</th>
+
+                            <th>Return Date</th>
+
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="recentTransactions">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Transactions - Library Hub</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="logo">
+
+        <i class="fa-solid fa-book-open"></i>
+
+        Library <span>Hub</span>
+
+    </div>
+
+
+    <nav class="nav-menu">
+
+        <div class="nav-title">
+            Main Menu
+        </div>
+
+        <a href="index.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            Dashboard
+
+        </a>
+
+        <a href="books.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-book"></i>
+
+            Books
+
+        </a>
+
+        <a href="members.html"
+           class="nav-link">
+
+            <i class="fa-solid fa-users"></i>
+
+            Members
+
+        </a>
+
+        <a href="transactions.html"
+           class="nav-link active">
+
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+            Transactions
+
+        </a>
+
+    </nav>
+
+</aside>
+
+
+<main class="main">
+
+    <header class="topbar">
+
+        <div style="display:flex;align-items:center;gap:15px">
+
+            <button
+                class="mobile-menu"
+                id="mobileMenu">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </div>
+
+
+        <div class="top-right">
+
+            <button
+                class="icon-btn"
+                id="themeToggle">
+
+                <i class="fa-solid fa-moon"></i>
+
+            </button>
+
+            <div class="user">
+
+                <div class="avatar">
+                    A
+                </div>
+
+                <div>
+
+                    <div class="user-name">
+                        Admin
+                    </div>
+
+                    <div class="user-role">
+                        Librarian
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <section class="page">
+
+        <div class="page-header">
+
+            <div>
+
+                <h1 class="page-title">
+                    Transactions
+                </h1>
+
+                <p class="page-subtitle">
+                    Issue and return library books
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <section class="form-card">
+
+            <h2>
+
+                <i class="fa-solid fa-book-open-reader"></i>
+
+                Issue Book
+
+            </h2>
+
+
+            <form id="issueForm">
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Select Member
+                        </label>
+
+                        <select id="memberSelect">
+
+                            <option value="">
+                                Select a member
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Select Book
+                        </label>
+
+                        <select id="bookSelect">
+
+                            <option value="">
+                                Select a book
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                    Issue Book
+
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <div class="card-title">
+                    Transaction History
+                </div>
+
+                <input
+                    type="text"
+                    id="transactionSearch"
+                    class="search-input"
+                    placeholder="Search transactions..."
+                    oninput="searchTransactions()">
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Book</th>
+
+                            <th>Member</th>
+
+                            <th>Issue Date</th>
+
+                            <th>Return Date</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="transactionTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

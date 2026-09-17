@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Members - Library Management</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            📚 Library Management
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Dashboard
+            </a>
+
+            <a href="books.html">
+                Books
+            </a>
+
+            <a href="members.html" class="active">
+                Members
+            </a>
+
+            <a href="transactions.html">
+                Transactions
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <main class="container">
+
+
+        <div class="page-header">
+
+            <div>
+
+                <h1>Member Management</h1>
+
+                <p>
+                    Register and manage library members
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADD MEMBER -->
+
+        <section class="form-card">
+
+            <h2>➕ Add New Member</h2>
+
+
+            <form id="memberForm">
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Member Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="memberName"
+                            placeholder="Enter member name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="memberEmail"
+                            placeholder="Enter email"
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone
+                        </label>
+
+                        <input
+                            type="text"
+                            id="memberPhone"
+                            placeholder="Enter phone number"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="primary-btn"
+                >
+                    Add Member
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- MEMBERS -->
+
+        <section class="section">
+
+
+            <div class="section-title">
+
+                <h2>👥 All Members</h2>
+
+
+                <input
+                    type="text"
+                    id="memberSearch"
+                    class="search-box"
+                    placeholder="🔍 Search members..."
+                    onkeyup="searchMembers()"
+                >
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>ID</th>
+
+                            <th>Name</th>
+
+                            <th>Email</th>
+
+                            <th>Phone</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="memberTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
